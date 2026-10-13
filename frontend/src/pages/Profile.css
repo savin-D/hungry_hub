@@ -1,0 +1,128 @@
+.profile-page { padding-bottom: 80px; }
+
+/* ── Profile card ── */
+.profile-card {
+  margin-top: 60px;
+  padding: 48px 56px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--glass-shadow);
+}
+
+.profile-avatar-area { position: relative; flex-shrink: 0; }
+
+/* gradient white→gray avatar */
+.profile-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+  border: 2px solid rgba(255,255,255,0.20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  color: #0a0a0a;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-glow {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+  filter: blur(12px);
+  z-index: 0;
+}
+
+.profile-info { flex: 1; min-width: 200px; }
+
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin-bottom: 6px;
+  letter-spacing: -0.03em;
+}
+
+.profile-email { font-size: 15px; color: rgba(240,240,240,0.45); margin-bottom: 12px; }
+
+.profile-role-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.70);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.profile-stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.profile-stat { text-align: center; }
+
+/* gradient text for stat values */
+.stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+
+.stat-key {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28);
+}
+
+.profile-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.10);
+}
+
+.profile-recipes-section { margin-top: 64px; }
+
+.profile-recipes-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .profile-card { padding: 32px 24px; flex-direction: column; align-items: flex-start; gap: 28px; }
+  .profile-stats { margin-left: 0; }
+}
